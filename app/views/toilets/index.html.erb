@@ -1,0 +1,13 @@
+<h1>Toilets</h1>
+<% @toilets.each do |toilet| %>
+  <div class="card w-75"">
+    <div class="card-body">
+      <h5 class="card-title">Name: <%= toilet.name %></h3>
+      <p class="card-text">Adress: <%= toilet.address %></p>
+      <p class="card-text">Location: <%= toilet.location %></p>
+      <p class="card-text">Poop rating: <%= toilet.poop_rating %> / 10</p>
+      <p class="card-text">Atmosphere:  <%= toilet.atmosphere %> / 10</p>
+      <%= link_to "More Info", toilet_path(toilet), :class => 'btn btn-outline-info' %>
+    </div>
+  </div><br>
+<% end %>

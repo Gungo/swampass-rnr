@@ -1,0 +1,40 @@
+<br><div class="card w-75">
+  <div class="card-body">
+    <h1><%= @toilet.name %></h1>
+    <p><b>Address</b><br><%= @toilet.address %></p>
+    <p><b>Location</b><br><%= @toilet.location %></p>
+    <p><b>Poop Rating</b><br><%= @toilet.poop_rating %> / 10</p>
+    <p><b>Atmosphere</b><br><%= @toilet.atmosphere %> / 10</p>
+    <hr>
+     <%= link_to "Edit", edit_toilet_path(@toilet),:class => 'btn btn-outline-warning' %>
+     <%= link_to "Delete", toilet_path(@toilet),
+                    method: :delete,
+                    data: {confirm: 'Are you sure?'},
+                    :class => 'btn btn-outline-danger' %>
+     <br><br>
+     <h4>Comments</h4>
+     <% @toilet.comments.each do |comment| %>
+        <div class="card w-75">
+          <div class="card-body">
+            <p><strong><%= comment.username %></strong>: <%= comment.body %></p>
+          </div>
+        </div>
+     <% end %>
+
+    <hr>
+      <h5>Add Comment</h5>
+      <%= form_for([@toilet, @toilet.comments.build]) do |c| %>
+        <p>
+          <%= c.label  :username %><br>
+          <%= c.text_field(:username, {:class => 'form-control'}) %>
+        </p>
+        <p>
+          <%= c.label  :body %><br>
+          <%= c.text_area(:body, {:class => 'form-control'}) %>
+        </p>
+        <p>
+          <%= c.submit({:class => 'btn btn-dark'}) %>
+        </p>
+      <% end %>
+  </div>
+</div></br>

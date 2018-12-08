@@ -1,0 +1,32 @@
+<h1>Edit Toilet</h1>
+<%= form_for :toilet, url: toilet_path(@toilet), method: :patch do |t| %>
+  <% if @toilet.errors.any? %>
+    <% @toilet.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+
+  <p>
+    <%= t.label :name%><br>
+    <%= t.text_field(:name, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    <%= t.label :address%><br>
+    <%= t.text_field(:address, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    <%= t.label :location%><br>
+    <%= t.text_field(:location, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    <%= t.label :poop_rating%> (1-10)<br>
+    <%= t.number_field(:poop_rating, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    <%= t.label :atmosphere%> (1-10)<br>
+    <%= t.number_field(:atmosphere, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    <%= t.submit({:class => 'btn btn-primary', :value => 'Add Comment'}) %>
+  </p>
+<% end %>
