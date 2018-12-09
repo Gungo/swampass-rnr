@@ -30,4 +30,4 @@ production:
   timeout: 5000
 
 # fix server bug
-host: localhost
+# host: localhost
