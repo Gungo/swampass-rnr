@@ -1,5 +1,5 @@
 <h1>Add Toilet</h1>
-<%= form_for :toilet, url: toilets_path do |t| %>
+<%= form_for :toilet, url: toilets_path(@toilet) do |t| %>
   <% if @toilet.errors.any? %>
     <% @toilet.errors.full_messages.each do |msg| %>
       <div class="alert alert-danger"><%= msg %></div>
@@ -19,11 +19,11 @@
     <%= t.text_field(:location, {:class => 'form-control'}) %>
   </p>
   <p>
-    <%= t.label :poop_rating%>(1-10)<br>
+    <%= t.label :poop_rating%>  (1-5)<br>
     <%= t.number_field(:poop_rating, {:class => 'form-control'}) %>
   </p>
   <p>
-    <%= t.label :atmosphere%>(1-10)<br>
+    <%= t.label :atmosphere%>  (1-5)<br>
     <%= t.number_field(:atmosphere, {:class => 'form-control'}) %>
   </p>
   <p>

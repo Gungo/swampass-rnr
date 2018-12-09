@@ -19,14 +19,14 @@
     <%= t.text_field(:location, {:class => 'form-control'}) %>
   </p>
   <p>
-    <%= t.label :poop_rating%> (1-10)<br>
+    <%= t.label :poop_rating%> (1-5)<br>
     <%= t.number_field(:poop_rating, {:class => 'form-control'}) %>
   </p>
   <p>
-    <%= t.label :atmosphere%> (1-10)<br>
+    <%= t.label :atmosphere%> (1-5)<br>
     <%= t.number_field(:atmosphere, {:class => 'form-control'}) %>
   </p>
   <p>
-    <%= t.submit({:class => 'btn btn-primary', :value => 'Add Comment'}) %>
+    <%= t.submit({:class => 'btn btn-primary', :value => 'Add Toilet'}) %>
   </p>
 <% end %>

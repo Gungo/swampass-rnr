@@ -1,0 +1,15 @@
+<h5>Add Comment</h5>
+<%= form_for([@toilet, @toilet.comments.build]) do |c| %>
+  <!-- TODO show errors if any later -->
+  <p>
+    <%= c.label  :username %><br>
+    <%= c.text_field(:username, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    <%= c.label  :body %><br>
+    <%= c.text_area(:body, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    <%= c.submit({:class => 'btn btn-dark'}) %>
+  </p>
+<% end %>
