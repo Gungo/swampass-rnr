@@ -1,24 +1,10 @@
-# README
+# SwampAss v.2 Ruby on Rails Implementation
+_A better way to do bathrooms. Worldwide baby._
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Using Ruby v.2.5.2 Rails 5.2.2](https://gorails.com/setup/osx/10.14-mojave)
 
-Things you may want to cover:
+## Running Server:
+`rails s`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Useful Guides:
+  - [Site Backbone: RnR CRUD fundamentals](https://www.youtube.com/watch?v=pPy0GQJLZUM&t=2750sx)
